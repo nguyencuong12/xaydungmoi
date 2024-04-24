@@ -16,7 +16,7 @@ const ProductQuickView = (product: ProductInterface) => {
             alt="butcatgach"
             width={0}
             height={0}
-            className=" w-full h-[180px] object-cover rounded-xl h-auto
+            className=" w-full h-[200px] object-cover rounded-xl 
         "
             sizes="100vw"
           ></Image>
