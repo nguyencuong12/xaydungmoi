@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Providers from "./providers";
-import { Navbar } from "./components";
+import { Footer, Navbar } from "./components";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Navbar />
           <div className="body">{children}</div>
+          <Footer/>
         </Providers>
       </body>
     </html>

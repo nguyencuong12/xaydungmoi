@@ -7,4 +7,5 @@ import ProductQuickView from "./ProductQuickView";
 import Trends from "./Trends";
 import AdvertiseDock from "./AdvertiseDock";
 import Loading from "./Loading";
-export { Loading, Navbar, MenuAdvertise, Brands, HighLightList, ProductsByCategories, ProductQuickView, Trends, AdvertiseDock };
+import Footer from "./Footer";
+export {Footer, Loading, Navbar, MenuAdvertise, Brands, HighLightList, ProductsByCategories, ProductQuickView, Trends, AdvertiseDock };

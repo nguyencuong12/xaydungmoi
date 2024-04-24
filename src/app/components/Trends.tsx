@@ -16,7 +16,7 @@ const Trends = () => {
       <Link href="#">
         <Image
           className="rounded-md drop-shadow-xl transition ease-in-out delay-100 bg-blue-500 hover:-translate-y-1 hover:scale-105 hover:bg-indigo-500 duration-300"
-          src="https://mayxaydungmoi.com/wp-content/uploads/2023/09/Banner01.png"
+          src="https://mayxaydungmoi.com/wp-content/uploads/2023/09/Banner02.png"
           height={400}
           width={380}
           alt="ss"
@@ -25,7 +25,7 @@ const Trends = () => {
       <Link href="#">
         <Image
           className="rounded-md drop-shadow-xl transition ease-in-out delay-100 bg-blue-500 hover:-translate-y-1 hover:scale-105 hover:bg-indigo-500 duration-300"
-          src="https://mayxaydungmoi.com/wp-content/uploads/2023/09/Banner01.png"
+          src="https://mayxaydungmoi.com/wp-content/uploads/2023/09/Banner03.png"
           height={400}
           width={380}
           alt="ss"
@@ -34,7 +34,7 @@ const Trends = () => {
       <Link href="#">
         <Image
           className="rounded-md drop-shadow-xl transition ease-in-out delay-100 bg-blue-500 hover:-translate-y-1 hover:scale-105 hover:bg-indigo-500 duration-300"
-          src="https://mayxaydungmoi.com/wp-content/uploads/2023/09/Banner01.png"
+          src="https://mayxaydungmoi.com/wp-content/uploads/2023/09/Banner04.png"
           height={400}
           width={380}
           alt="ss"
