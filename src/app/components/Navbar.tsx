@@ -111,7 +111,7 @@ const Navbar = () => {
                         <DropdownMenu className="min-w-[300px]">
                           {menuItem.subItems.map((subMenu, index2) => {
                             return (
-                              <DropdownItem>
+                              <DropdownItem key={index2}>
                                 <Link href="/123"> {subMenu.subItemTitle}</Link>
                               </DropdownItem>
                             );
