@@ -119,10 +119,10 @@ const Navbar = () => {
                             {menuItem.title}
                           </Button>
                         </DropdownTrigger>
-                        <DropdownMenu className="min-w-[300px]">
+                        <DropdownMenu className="min-w-[300px]"  aria-label={menuItem.title}>
                           {menuItem.subItems.map((subMenu, index2) => {
                             return (
-                              <DropdownItem key={index2}>
+                              <DropdownItem key={index2} textValue={subMenu.subItemTitle}>
                                 <Link href="/123"> {subMenu.subItemTitle}</Link>
                               </DropdownItem>
                             );

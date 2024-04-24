@@ -13,7 +13,7 @@ const AdvertiseDock = () => {
               sizes="100vw"
               width={0}
               height={0}
-              className="w-full h-auto border border-rose-500"
+              className="w-full h-auto "
             ></Image>
           </div>
           <div className="w-[1450px]"></div>
@@ -24,13 +24,11 @@ const AdvertiseDock = () => {
               sizes="100vw"
               width={0}
               height={0}
-              className="w-full h-auto border border-rose-500"
+              className="w-full h-auto "
             ></Image>
           </div>
         </div>
       </div>
-
-   
     </div>
   );
 };

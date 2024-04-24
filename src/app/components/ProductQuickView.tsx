@@ -7,7 +7,7 @@ const ProductQuickView = (product: ProductInterface) => {
   return (
     <Link
       href="#"
-      className=" w-full rounded-sm p-4 flex flex-col gap-2 drop-shadow-xl transition ease-in-out delay-100 hover:-translate-y-4  duration-300"
+      className="max-h-[350px] w-full rounded-sm p-4 flex flex-col gap-2 drop-shadow-xl transition ease-in-out delay-100 hover:-translate-y-4  duration-300"
     >
       <Card className="py-4">
         <CardBody className="overflow-visible py-2">
@@ -16,7 +16,7 @@ const ProductQuickView = (product: ProductInterface) => {
             alt="butcatgach"
             width={0}
             height={0}
-            className=" w-full object-cover rounded-xl h-auto
+            className=" w-full h-[200px] object-cover rounded-xl h-auto
         "
             sizes="100vw"
           ></Image>
