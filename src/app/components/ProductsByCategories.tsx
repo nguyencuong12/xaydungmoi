@@ -38,7 +38,7 @@ const ProductsByCategories = (categories: CategoryInterface) => {
   };
 
   return (
-    <section className="my-4 p-4  mx-auto min-h-[300px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md">
+    <section className="my-4 p-4  mx-auto min-h-[250px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md">
       {showHeader && (
         <div className="header text-white flex justify-between items-center border-b-1 border-white pb-4  ">
           <h1>Bàn cắt gạch</h1>
