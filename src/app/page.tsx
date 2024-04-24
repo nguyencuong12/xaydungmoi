@@ -24,12 +24,17 @@ const DynamicProductByCategoryComponent = dynamic(() => import("./components/Pro
   loading: () => <Loading></Loading>,
 });
 
+const DynamicAdvertiseComponent = dynamic(()=>import("./components/AdvertiseDock"),{
+  ssr: false,
+  loading: () => <Loading></Loading>,
+})
 export default function Home() {
   return (
     <main className="py-10">
       <MegaMenu></MegaMenu>
       <Trends />
-      <AdvertiseDock />
+      <DynamicAdvertiseComponent/>
+      
       <DynamicMenuAdvertise />
       <DynamicBrandsComponent></DynamicBrandsComponent>
       <DynamicHighlightsComponent />
