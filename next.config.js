@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
- 
   reactStrictMode: true,
   experimental: {
+  },
+  env: {
+    PUBLIC_URL: '/',
   },
   images:{
     path:"/",
     domains:['mayxaydungmoi.com']
-  }
+  },
+  // env:{
+  //   apiUrl:"https://nguyencuong12.github.io/xaydungmoi/"
+  // }
 }
 
 module.exports = nextConfig
