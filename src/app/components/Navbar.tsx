@@ -14,8 +14,7 @@ const Navbar = () => {
     <>
       <div className="banner-top h-16 w-full relative hidden sm:block">
         <Image
-          unoptimized
-          src="/bannerTop.png"
+          src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/Banner-top-2.png"
           alt="banner top"
           fill={true}
           priority={true}
@@ -25,8 +24,7 @@ const Navbar = () => {
       </div>
       <div className="banner-top h-10 w-full relative block sm:hidden">
         <Image
-          unoptimized
-          src="/bannerTop.png"
+          src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/Banner-top-2.png"
           alt="banner top"
           fill={true}
           quality={80}
@@ -51,7 +49,12 @@ const Navbar = () => {
       <nav className="bg-white  min-h-24 hidden sm:block sticky top-[0px] z-50">
         <div className="mx-auto w-11/12 flex items-end justify-between ">
           <Link href="/">
-            <Image unoptimized src="/logo.png" alt="Logo 123" height={250} width={250}></Image>
+            <Image
+              src="https://mayxaydungmoi.com/wp-content/uploads/2023/08/mayxaydungmoi-logo-moi.png"
+              alt="Logo 123"
+              height={250}
+              width={250}
+            ></Image>
           </Link>
           <form className="relative  border border-grey-500 rounded-md pl-4 w-[600px] flex items-center justify-between mx-4 ">
             <input type="text" placeholder="Bạn muốn mua gì hôm nay?" className="text-sm outline-none w-full mr-2" />
@@ -84,7 +87,12 @@ const Navbar = () => {
               {toggleMobile ? <XCircle size={30} color="#1325A0"></XCircle> : <Menu size={30} color="#1325A0" />}
             </Button>
             <Link href="/">
-              <Image unoptimized src="/logo.png" alt="Logo" height={200} width={200}></Image>
+              <Image
+                src="https://mayxaydungmoi.com/wp-content/uploads/2023/08/mayxaydungmoi-logo-moi.png"
+                alt="Logo"
+                height={200}
+                width={200}
+              ></Image>
             </Link>
             <Button isIconOnly aria-label="Like" className="bg-white">
               <Send size={30} color="#1325A0" />

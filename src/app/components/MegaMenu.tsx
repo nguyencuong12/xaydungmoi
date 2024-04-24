@@ -20,7 +20,7 @@ const MegaMenu = () => {
   };
   return (
     <div className="mega-menu flex w-11/12 mx-auto mt-2 gap-2 ">
-      <div className="categories w-[540px] bg-white rounded-md relative hidden lg:block z-10">
+      <div className="categories w-[850px]  bg-white rounded-md relative hidden lg:block z-10">
         <ul className="menu-list">
           {MegaMenuItemsData.map((menuItem, index) => (
             <li className="hover:bg-[#eee] p-2 " key={index} onMouseEnter={() => toggleMenu(index)} onMouseLeave={() => toggleMenu(index)}>
@@ -28,7 +28,7 @@ const MegaMenu = () => {
                 <Layers size={15} /> {menuItem.title}
               </a>
               {activeMenu === index && (
-                <div className="sub-menu absolute top-0 z-50 left-[250px] w-[1000px] h-full bg-white border border-grey-500 rounded-md  ">
+                <div className="sub-menu absolute top-0 z-50 left-[240px] w-[1000px] h-full bg-white border border-grey-500 rounded-md  ">
                   <div className="grid grid-cols-3 gap-2 mx-2">
                     {menuItem.subItems.map((subItem, subIndex) => (
                       <a key={subIndex} href={subItem.subItemHref} className="hover:text-red-500">
@@ -55,25 +55,55 @@ const MegaMenu = () => {
           >
             <SwiperSlide>
               <Link href="#">
-                <Image alt="test" src="/banner.png" quality={100} width="0" height="0" sizes="100vw" className="w-full h-auto object-cover"></Image>
+                <Image
+                  alt="test"
+                  src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/11-2.png"
+                  quality={100}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-full h-auto object-cover"
+                ></Image>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
               <Link href="#">
-                <Image alt="test" src="/banner.png" quality={100} width="0" height="0" sizes="100vw" className="w-full h-auto object-cover"></Image>
+                <Image
+                  alt="test"
+                  src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/11-2.png"
+                  quality={100}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-full h-auto object-cover"
+                ></Image>
               </Link>
             </SwiperSlide>
           </Swiper>
 
-          <div className="grid grid-cols-2 ">
-            <Image alt="test1" src="/testW.webp" width={0} height={0} sizes="100vw" className="h-auto w-full"></Image>
-            <Image alt="test1" src="/testW.webp" width={0} height={0} sizes="100vw" className="h-auto w-full"></Image>
+          <div className="grid grid-cols-2 gap-2 my-2 ">
+            <Image
+              alt="test1"
+              src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/2.png"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-auto w-full"
+            ></Image>
+            <Image
+              alt="test1"
+              src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/2.png"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-auto w-full"
+            ></Image>
           </div>
         </div>
-        <div className="  flex flex-col gap-2 hidden lg:block">
-          <Image alt="test1" src="/testW.webp" width={400} height={370}></Image>
-          <Image alt="test1" src="/testW.webp" width={400} height={370}></Image>
-          <Image alt="test1" src="/testW.webp" width={400} height={370}></Image>
+        <div className="  flex flex-col gap-2 hidden lg:block ">
+          <Image alt="test1" src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/2.png" width={400} height={370}></Image>
+          <Image className="my-1" alt="test1" src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/2.png" width={400} height={370}></Image>
+          <Image className="my-1" alt="test1" src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/2.png" width={400} height={370}></Image>
         </div>
       </div>
     </div>
