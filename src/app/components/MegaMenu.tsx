@@ -3,33 +3,34 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { MegaMenuItemsData } from "../data";
 import { Layers } from "react-feather";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import Link from 'next/link';
 
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import ProductQuickView from "./ProductQuickView";
-import Link from "next/link";
+// import ProductQuickView from "./ProductQuickView";
+
 const MegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
   const toggleMenu = (index: number) => {
-    // setIsMenuOpen(!isMenuOpen);
+   
     setActiveMenu(activeMenu === index ? null : index);
   };
   return (
-    <div className="mega-menu flex w-11/12 mx-auto mt-2 gap-2 ">
+    <div className="mega-menu flex w-11/12 mx-auto mt-2 gap-2">
       <div className="categories w-[850px]  bg-white rounded-md relative hidden lg:block z-10">
         <ul className="menu-list">
           {MegaMenuItemsData.map((menuItem, index) => (
             <li className="hover:bg-[#eee] p-2 " key={index} onMouseEnter={() => toggleMenu(index)} onMouseLeave={() => toggleMenu(index)}>
-              <a href="#" className="flex gap-2 items-center">
+              <Link href={menuItem.href ?? '/'} className="flex gap-2 items-center">
                 <Layers size={15} /> {menuItem.title}
-              </a>
+              </Link>
               {activeMenu === index && (
                 <div className="sub-menu absolute top-0 z-50 left-[240px] w-[1000px] h-full bg-white border border-grey-500 rounded-md  ">
-                  <div className="grid grid-cols-3 gap-2 mx-2">
+                  <div className="grid grid-cols-3 gap-4 mx-2 my-4">
                     {menuItem.subItems.map((subItem, subIndex) => (
                       <a key={subIndex} href={subItem.subItemHref} className="hover:text-red-500">
                         {subItem.subItemTitle}

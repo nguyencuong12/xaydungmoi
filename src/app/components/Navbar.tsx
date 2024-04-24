@@ -49,13 +49,13 @@ const Navbar = () => {
       <nav className="bg-white  min-h-24 hidden sm:block sticky top-[0px] z-50">
         <div className="mx-auto w-11/12 flex items-end justify-between ">
           <Link href="/">
-            <Image src={`${process.env.API_URL}/logo.png`} alt="Logo 123" height={250} width={250}></Image>
-            {/* <Image
+            {/* <Image src={`${process.env.API_URL}/logo.png`} alt="Logo 123" height={250} width={250}></Image> */}
+            <Image
               src="https://mayxaydungmoi.com/wp-content/uploads/2023/08/mayxaydungmoi-logo-moi.png"
               alt="Logo 123"
               height={250}
               width={250}
-            ></Image> */}
+            ></Image>
           </Link>
           <form className="relative  border border-grey-500 rounded-md pl-4 w-[600px] flex items-center justify-between mx-4 ">
             <input type="text" placeholder="Bạn muốn mua gì hôm nay?" className="text-sm outline-none w-full mr-2" />

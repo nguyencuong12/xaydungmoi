@@ -1,9 +1,38 @@
 const MegaMenuItemsData = [
   {
     title: "Bàn cắt gạch",
+    href:"/123123",
     subItems: [
       {
-        subItemTitle: "Ap luc cao",
+        subItemTitle: "Bàn cắt gạch Pana Pro ",
+        subItemHref: "/qsdjqsd",
+      },
+      {
+        subItemTitle: "Bàn cắt gạch Cf Cooper ",
+        subItemHref: "/qsdjqsd",
+      },
+      {
+        subItemTitle: "Bàn cắt gạch Hayner ",
+        subItemHref: "/qsdjqsd",
+      },
+      {
+        subItemTitle: "Bàn cắt gạch Riobi Pro ",
+        subItemHref: "/qsdjqsd",
+      },
+      {
+        subItemTitle: "Bàn cắt gạch Riobi QC ",
+        subItemHref: "/qsdjqsd",
+      },
+      {
+        subItemTitle: "Bàn cắt gạch Top V  ",
+        subItemHref: "/qsdjqsd",
+      },
+      {
+        subItemTitle: "Dụng cụ ốp gạch lát  ",
+        subItemHref: "/qsdjqsd",
+      },
+      {
+        subItemTitle: "Bàn cắt gạch  ",
         subItemHref: "/qsdjqsd",
       },
     ],

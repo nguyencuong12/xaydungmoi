@@ -1,5 +1,6 @@
 import MegaMenuItemsData from "./megamenu";
 import BrandData from "./brand";
-import HighlightList1 from "./highlightList";
+import {HighLightList1,HighlightList2} from "./highlightList";
 import TopMenuList from "./topMenuList";
-export { MegaMenuItemsData, BrandData, HighlightList1, TopMenuList };
+
+export { MegaMenuItemsData, BrandData, HighLightList1,HighlightList2, TopMenuList };

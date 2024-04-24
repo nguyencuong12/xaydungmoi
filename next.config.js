@@ -2,9 +2,13 @@
 const nextConfig = {
   experimental: {
   },
- 
   images:{
-    domains:['mayxaydungmoi.com']
+    remotePatterns:[
+      {
+        hostname:"mayxaydungmoi.com"
+      }
+  ]
+  
   },
   // env:{
   //   apiUrl:"https://nguyencuong12.github.io/xaydungmoi/"

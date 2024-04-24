@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HighlightList1 } from "../data";
+import {HighLightList1,HighlightList2 } from "../data";
 import Link from "next/link";
 import Image from "next/image";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -47,7 +47,7 @@ const HighlightList = () => {
           pagination={{ clickable: true }}
           onSwiper={(swiper) => {}}
         >
-          {HighlightList1.map((highlightItem, index) => {
+          {HighLightList1.map((highlightItem, index) => {
             return (
               <SwiperSlide key={index}>
                 <Link href="#" className="flex flex-col items-center gap-2">
@@ -69,7 +69,7 @@ const HighlightList = () => {
           pagination={{ clickable: true }}
           onSwiper={(swiper) => {}}
         >
-          {HighlightList1.map((highlightItem, index) => {
+          {HighlightList2.map((highlightItem, index) => {
             return (
               <SwiperSlide key={index}>
                 <Link href="#" className="flex flex-col items-center gap-1">
