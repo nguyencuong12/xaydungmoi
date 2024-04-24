@@ -1,50 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Home, Tag, PhoneCall, Archive, Facebook, Youtube, ShoppingCart, Search, Menu, Send } from "react-feather";
-import { v4 as uuidv4 } from "uuid";
-import { Button } from "@nextui-org/react";
-
-const TopMenuList = [
-  {
-    id: uuidv4(),
-    icon: Home,
-    title: "Trang chủ",
-    href: "/",
-  },
-  {
-    id: uuidv4(),
-    icon: Tag,
-    title: "Khuyến Mãi",
-    href: "/",
-  },
-  {
-    id: uuidv4(),
-    icon: PhoneCall,
-    title: "Liên Hệ",
-    href: "/",
-  },
-  {
-    id: uuidv4(),
-    icon: Archive,
-    title: "Tin Tức",
-    href: "/",
-  },
-  {
-    id: uuidv4(),
-    icon: Facebook,
-    title: "Facebook",
-    href: "/",
-  },
-  {
-    id: uuidv4(),
-    icon: Youtube,
-    title: "Youtube",
-    href: "/",
-  },
-];
+import { ShoppingCart, Search, Menu, Send, XCircle } from "react-feather";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
+import { MegaMenuItemsData, TopMenuList } from "../data";
 
 const Navbar = () => {
+  const [toggleMobile, setToggleMobile] = useState(false);
+
   return (
     <>
       <div className="banner-top h-16 w-full relative hidden sm:block">
@@ -92,7 +57,7 @@ const Navbar = () => {
             <Button isIconOnly aria-label="Like" className="bg-white">
               <Search />
             </Button>
-            {/* <div className="absolute top-[40px] left-0 border border-grey-500  w-full p-2 bg-white text-sm ">Test Search</div> */}
+            {/* <div className="absolute top-[40px] min-h-[150px] z-50 left-0 border border-grey-500  w-full p-2 bg-white text-sm ">Test Search</div> */}
           </form>
 
           <Link href="/gio-hang" className="flex items-center">
@@ -103,11 +68,18 @@ const Navbar = () => {
       </nav>
 
       {/* Navbar fixed mobile*/}
-      <nav className="bg-white  min-h-20  block sm:hidden sticky w-full top-[0px] mt-2 z-50 py-2">
-        <div className="w-11/12 mx-auto">
+      <nav className="bg-white  min-h-20  block sm:hidden sticky w-full top-[0px] mt-2 z-50 py-2  ">
+        <div className="w-11/12 mx-auto ">
           <div className=" flex items-end justify-between ">
-            <Button isIconOnly aria-label="Like" className="bg-white">
-              <Menu size={30} color="#1325A0" />
+            <Button
+              isIconOnly
+              aria-label="Like"
+              className="bg-white"
+              onClick={() => {
+                setToggleMobile(!toggleMobile);
+              }}
+            >
+              {toggleMobile ? <XCircle size={30} color="#1325A0"></XCircle> : <Menu size={30} color="#1325A0" />}
             </Button>
             <Link href="/">
               <Image src="/logo.png" alt="Logo" height={200} width={200}></Image>
@@ -122,8 +94,36 @@ const Navbar = () => {
             <Button isIconOnly aria-label="Like" className="bg-white">
               <Search />
             </Button>
-            {/* <div className="absolute top-[40px] left-0 border border-grey-500  w-full p-2 bg-white text-sm ">Test Search</div> */}
+            {/* <div className="absolute top-[40px] min-h-[150px] z-50 left-0 border border-grey-500  w-full p-2 bg-white text-sm ">Test Search</div> */}
           </form>
+          {toggleMobile && (
+            <div className="rounded-md">
+              <ul>
+                {MegaMenuItemsData.map((menuItem, index) => {
+                  return (
+                    <li key={index}>
+                      <Dropdown>
+                        <DropdownTrigger>
+                          <Button variant="bordered" fullWidth className="my-1">
+                            {menuItem.title}
+                          </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu className="min-w-[300px]">
+                          {menuItem.subItems.map((subMenu, index2) => {
+                            return (
+                              <DropdownItem>
+                                <Link href="/123"> {subMenu.subItemTitle}</Link>
+                              </DropdownItem>
+                            );
+                          })}
+                        </DropdownMenu>
+                      </Dropdown>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
         </div>
       </nav>
     </>

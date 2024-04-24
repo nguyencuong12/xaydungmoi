@@ -6,6 +6,7 @@
 body{
   background:#ECECEC;
   overflow-x:hidden;
+  box-sizing: border-box;
 
 }
 /* :root {

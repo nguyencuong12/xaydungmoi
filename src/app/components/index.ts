@@ -1,3 +1,10 @@
 import Navbar from "./Navbar";
 import MenuAdvertise from "./MenuAdvertise";
-export { Navbar, MenuAdvertise };
+import Brands from "./Brands";
+import HighLightList from "./HighlightList";
+import ProductsByCategories from "./ProductsByCategories";
+import ProductQuickView from "./ProductQuickView";
+import Trends from "./Trends";
+import AdvertiseDock from "./AdvertiseDock";
+import Loading from "./Loading";
+export { Loading, Navbar, MenuAdvertise, Brands, HighLightList, ProductsByCategories, ProductQuickView, Trends, AdvertiseDock };

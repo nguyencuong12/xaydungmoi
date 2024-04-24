@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import ProductsByCategories from "./ProductsByCategories";
 
 const MenuAdvertise = () => {
   const [activeMenu, setActiveMenu] = useState<number | null>(0);
@@ -29,14 +30,16 @@ const MenuAdvertise = () => {
     },
   ];
   return (
-    <section className=" introduce w-11/12 mx-auto mt-8  rounded-md min-h-[450px] flex flex-col ">
+    <section className=" introduce w-11/12 sm:w-9/12 mx-auto mt-8  rounded-md min-h-[450px] flex flex-col bg-white ">
       <div className="flex ">
         {/* activeMenu === index */}
         {menus.map((menu, index) => {
           return (
             <div
               key={index}
-              className={`${activeMenu == index ? "bg-green-500" : "bg-grey-500"} grow p-4 text-center cursor-pointer rounded-t-lg`}
+              className={`${
+                activeMenu == index ? "bg-gradient-to-r from-cyan-500 to-blue-500" : "bg-grey-500"
+              } grow p-4 text-center cursor-pointer rounded-t-lg`}
               onClick={() => {
                 toggleMenu(index);
               }}
@@ -46,7 +49,9 @@ const MenuAdvertise = () => {
           );
         })}
       </div>
-      <div className="grow bg-green-500">SAN PHAM HIEN THI</div>
+      <div className="grow bg-gradient-to-r from-cyan-500 to-blue-500">
+        <ProductsByCategories showHeader={false} category=""></ProductsByCategories>
+      </div>
     </section>
   );
 };
