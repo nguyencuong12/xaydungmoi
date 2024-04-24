@@ -9,7 +9,7 @@ import { MegaMenuItemsData, TopMenuList } from "../data";
 
 const Navbar = () => {
   const [toggleMobile, setToggleMobile] = useState(false);
-
+  useEffect(() => {});
   return (
     <>
       <div className="banner-top h-16 w-full relative hidden sm:block">
@@ -49,7 +49,7 @@ const Navbar = () => {
       <nav className="bg-white  min-h-24 hidden sm:block sticky top-[0px] z-50">
         <div className="mx-auto w-11/12 flex items-end justify-between ">
           <Link href="/">
-            <Image src="/logo.png" alt="Logo 123" height={250} width={250}></Image>
+            <Image src={`${process.env.API_URL}/logo.png`} alt="Logo 123" height={250} width={250}></Image>
             {/* <Image
               src="https://mayxaydungmoi.com/wp-content/uploads/2023/08/mayxaydungmoi-logo-moi.png"
               alt="Logo 123"
