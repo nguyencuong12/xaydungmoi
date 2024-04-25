@@ -4,12 +4,19 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ShoppingCart, Search, Menu, Send, XCircle } from "react-feather";
-import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, toggle } from "@nextui-org/react";
 import { MegaMenuItemsData, TopMenuList } from "../data";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const [toggleMobile, setToggleMobile] = useState(false);
-  useEffect(() => {});
+  useEffect(() => {
+    if (toggleMobile) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  }, [toggleMobile]);
   return (
     <>
       <div className="banner-top h-16 w-full relative hidden sm:block">
@@ -107,34 +114,7 @@ const Navbar = () => {
             </Button>
             {/* <div className="absolute top-[40px] min-h-[150px] z-50 left-0 border border-grey-500  w-full p-2 bg-white text-sm ">Test Search</div> */}
           </form>
-          {toggleMobile && (
-            <div className="rounded-md">
-              <ul>
-                {MegaMenuItemsData.map((menuItem, index) => {
-                  return (
-                    <li key={index}>
-                      <Dropdown>
-                        <DropdownTrigger>
-                          <Button variant="bordered" fullWidth className="my-1">
-                            {menuItem.title}
-                          </Button>
-                        </DropdownTrigger>
-                        <DropdownMenu className="min-w-[300px]"  aria-label={menuItem.title}>
-                          {menuItem.subItems.map((subMenu, index2) => {
-                            return (
-                              <DropdownItem key={index2} textValue={subMenu.subItemTitle}>
-                                <Link href="/123"> {subMenu.subItemTitle}</Link>
-                              </DropdownItem>
-                            );
-                          })}
-                        </DropdownMenu>
-                      </Dropdown>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          )}
+          {toggleMobile && <Sidebar />}
         </div>
       </nav>
     </>

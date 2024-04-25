@@ -8,4 +8,5 @@ import Trends from "./Trends";
 import AdvertiseDock from "./AdvertiseDock";
 import Loading from "./Loading";
 import Footer from "./Footer";
-export {Footer, Loading, Navbar, MenuAdvertise, Brands, HighLightList, ProductsByCategories, ProductQuickView, Trends, AdvertiseDock };
+import Sidebar from "./Sidebar";
+export { Sidebar, Footer, Loading, Navbar, MenuAdvertise, Brands, HighLightList, ProductsByCategories, ProductQuickView, Trends, AdvertiseDock };
