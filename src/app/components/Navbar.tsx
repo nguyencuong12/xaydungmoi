@@ -11,11 +11,11 @@ import Sidebar from "./Sidebar";
 const Navbar = () => {
   const [toggleMobile, setToggleMobile] = useState(false);
   useEffect(() => {
-    if (toggleMobile) {
-      document.body.classList.add("overflow-y-hidden");
-    } else {
-      document.body.classList.remove("overflow-y-hidden");
-    }
+    // if (toggleMobile) {
+    //   document.body.classList.add("overflow-y-hidden");
+    // } else {
+    //   document.body.classList.remove("overflow-y-hidden");
+    // }
   }, [toggleMobile]);
   return (
     <>

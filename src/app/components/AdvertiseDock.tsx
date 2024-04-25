@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const AdvertiseDock = () => {
   return (
-    <div className="sticky top-[72px] flex justify-center">
+    <div className="sticky top-[10px] flex justify-center">
       <div className="absolute">
-        <div>
-          <div className="left-banner w-[200px] h-[300px] absolute right-[100%] ">
+        <div className="">
+          <div className="left-banner w-[200px] h-[300px] absolute right-[100%]">
             <Image
               src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/1-3.png"
               alt="ss"

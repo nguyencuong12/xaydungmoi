@@ -14,8 +14,6 @@ const Sidebar = () => {
               </Link>
               <div className="flex w-10 items-center justify-center">
                 <div className="border-8 border-transparent border-l-gray-600 ml-2 group-open:rotate-90 transition-transform origin-left"></div>
-
-                {/* <ArrowDown /> */}
               </div>
             </summary>
             <div className="px-6 ">
