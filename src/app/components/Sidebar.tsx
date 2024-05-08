@@ -9,7 +9,7 @@ const Sidebar = () => {
         return (
           <details className="bg-white shadow-rounded group mb-4" open={false} key={index}>
             <summary className="list-none flex flex-wrap items-center px-2">
-              <Link href={menuItem.href ?? "/"} className="flex flex-1 p-4 font-semibold">
+              <Link href={menuItem.href ?? "/"} className="flex flex-1 p-4 font-semibold text-sm ">
                 {menuItem.title}
               </Link>
               <div className="flex w-10 items-center justify-center">
@@ -19,7 +19,7 @@ const Sidebar = () => {
             <div className="px-6 ">
               {menuItem.subItems.map((subItem, index2) => {
                 return (
-                  <div key={index2} className="py-4">
+                  <div key={index2} className="py-4 text-xs">
                     <Link href={subItem.subItemHref}>{subItem.subItemTitle}</Link>
                   </div>
                 );

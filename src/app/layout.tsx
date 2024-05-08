@@ -2,6 +2,10 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Providers from "./providers";
 import { Footer, Navbar } from "./components";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const inter = Inter({ subsets: ["latin"] });
 

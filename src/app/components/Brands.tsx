@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { BrandData } from "../data";
+import HeadingLine from "./HeadingLine";
 const Brands = () => {
   const params = {
     slidesPerView: 1,
@@ -32,10 +33,9 @@ const Brands = () => {
 
   return (
     <section className="brand mt-8 w-11/12 sm:w-9/12 mx-auto bg-white rounded-md p-4">
-      <h1 className="my-2">Thương Hiệu</h1>
+      <HeadingLine title="Thương Hiệu" />
       <div className="brand-wrapper py-6 my-2 ">
         <Swiper
-        
           {...params}
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}

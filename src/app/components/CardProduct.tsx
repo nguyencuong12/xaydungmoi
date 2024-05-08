@@ -7,16 +7,16 @@ const ProductQuickView = (product: ProductInterface) => {
   return (
     <Link
       href="#"
-      className="max-h-[350px] w-full rounded-sm p-4 flex flex-col gap-2 drop-shadow-xl transition ease-in-out delay-100 hover:-translate-y-4  duration-300"
+      className="w-full rounded-sm p-4 flex flex-col gap-2 drop-shadow-xl transition ease-in-out delay-100 hover:-translate-y-4  duration-300"
     >
-      <Card className="py-4">
-        <CardBody className="overflow-visible py-2">
+      <Card className="py-2 ">
+        <CardBody className=" py-2">
           <Image
             src="https://mayxaydungmoi.com/wp-content/uploads/2024/03/but-cat-gach-RyobiPro.png"
             alt="butcatgach"
-            width={0}
-            height={0}
-            className=" w-full h-[200px] object-cover rounded-xl 
+            width={200}
+            height={200}
+            className="mx-auto rounded-xl 
         "
             sizes="100vw"
           ></Image>
