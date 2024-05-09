@@ -4,7 +4,7 @@ import MegaMenu from "./components/MegaMenu";
 
 import React, { Suspense } from "react";
 
-import { Trends, ProductsByCategories, AdvertiseDock, Loading } from "./components";
+import { Trends, ProductsByCategories, AdvertiseDock, Loading, WrapperSection } from "./components";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
@@ -36,25 +36,10 @@ export default function Home() {
       <Trends />
       <DynamicAdvertiseComponent />
       <DynamicMenuAdvertise />
-      <DynamicBrandsComponent></DynamicBrandsComponent>
       <DynamicHighlightsComponent />
-      <div className="w-11/12 sm:w-9/12 mx-auto my-10">
-        <DynamicProductByCategoryComponent showHeader={true} category="Bàn cắt gạch" backgroundColor="bg-[#59D2FF]" />
-      </div>
-      <div className="w-11/12 sm:w-9/12 mx-auto my-10 ">
-        <DynamicProductByCategoryComponent showHeader={true} category="Dụng cụ điện cầm tay" backgroundColor="bg-[#9600FF]" />
-      </div>
-      <div className="w-11/12 sm:w-9/12 mx-auto my-10">
-        <DynamicProductByCategoryComponent showHeader={true} category="Máy hàn điện tử" backgroundColor="bg-[#3BDDA4]" />
-      </div>
-      <div className="w-11/12 sm:w-9/12 mx-auto my-10">
-        <DynamicProductByCategoryComponent showHeader={true} category="Máy móc hỗ trợ xây dựng" backgroundColor="bg-[#FFD200]" />
-      </div>
-      <div className="w-11/12 sm:w-9/12 mx-auto my-10">
-        <DynamicProductByCategoryComponent showHeader={true} category="Máy móc hỗ trợ xây dựng" backgroundColor="bg-[#FF508B]" />
-      </div>
+      <DynamicProductByCategoryComponent showHeader={true} category="Bàn cắt gạch" />
 
-      <div className="w-11/12 sm:w-9/12 mx-auto my-10">
+      {/* <div className="w-11/12 sm:w-11/12 mx-auto my-10">
         <Image
           alt="banner test"
           width={0}
@@ -63,7 +48,9 @@ export default function Home() {
           className="w-full h-[350px] object-cover"
           src="https://mayxaydungmoi.com/wp-content/uploads/2023/10/5.png"
         ></Image>
-      </div>
+      </div> */}
+      <DynamicBrandsComponent></DynamicBrandsComponent>
+
       <div className="w-11/12 sm:w-9/12 mx-auto">
         <h1 className="my-4 border-b-2 border-grey-500">Kênh Youtube</h1>
         <iframe

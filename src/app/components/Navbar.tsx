@@ -45,8 +45,8 @@ const Navbar = () => {
         {TopMenuList.map((topMenuItem) => {
           return (
             <Link className="flex mx-2" href={topMenuItem.href} key={topMenuItem.id}>
-              <topMenuItem.icon className="mx-2" size={22} />
-              <p className="text-sm">{topMenuItem.title}</p>
+              <topMenuItem.icon className="mx-2 text-white" size={22} />
+              <p className="text-sm text-white">{topMenuItem.title}</p>
             </Link>
           );
         })}

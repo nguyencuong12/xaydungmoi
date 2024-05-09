@@ -1,15 +1,11 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "react-feather";
 import ProductQuickView from "./CardProduct";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import HeadingLine from "./HeadingLine";
+import WrapperSection from "./common/WrapperSection";
 const ProductsByCategories = (categories: CategoryInterface) => {
   const { showHeader, category, backgroundColor } = categories;
 
@@ -38,43 +34,43 @@ const ProductsByCategories = (categories: CategoryInterface) => {
   };
 
   return (
-    <section className={`my-4 p-4  mx-auto h-[auto] ${backgroundColor} rounded-md`}>
-      {showHeader && (
-        <div className="header text-white flex justify-between items-center border-b-1 border-white pb-4  ">
-          <h1 className="font-semibold text-sm md:text-xl sm:text-lg">{category}</h1>
-          <Link href="#" className="flex items-center gap-2 font-semibold text-sm md:text-xl sm:text-lg">
-            <span> Xem tất cả</span>
-            <ArrowRight></ArrowRight>
-          </Link>
+    <>
+      <WrapperSection>
+        {showHeader && (
+          <div className="header text-white flex justify-between items-start px-4  ">
+            <HeadingLine title="Bàn cắt gạch"></HeadingLine>
+            <Link href="#" className="flex items-center gap-2 bg-gray-300 py-2 px-4 rounded-md ">
+              Xem tất cả
+            </Link>
+          </div>
+        )}
+        <div>
+          <Swiper
+            {...params}
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            onSwiper={(swiper) => {}}
+          >
+            <SwiperSlide>
+              <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
+            </SwiperSlide>
+          </Swiper>
         </div>
-      )}
-      <div className="mt-4 ">
-        <Swiper
-          {...params}
-          // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={30}
-          pagination={{ clickable: true }}
-          onSwiper={(swiper) => {}}
-        >
-          <SwiperSlide>
-            <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductQuickView name="Bút cắt gạch" price={500} sale={400} description="hihi"></ProductQuickView>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </section>
+      </WrapperSection>
+    </>
   );
 };
 

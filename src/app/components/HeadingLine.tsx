@@ -6,7 +6,7 @@ interface HeadingLineProps {
 const HeadingLine = ({ title }: HeadingLineProps) => {
   return (
     <div className="mb-8">
-      <h1 className="border-b-4 border-[#F88114] rounded-md inline-block text-[#F88114] text-2xl font-bold">{title}</h1>
+      <h1 className="border-b-4 border-[#000000] rounded-md inline-block text-[#000000]  font-bold">{title}</h1>
     </div>
   );
 };

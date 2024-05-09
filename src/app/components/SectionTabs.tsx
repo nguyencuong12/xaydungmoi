@@ -54,6 +54,7 @@ const MenuAdvertise = () => {
             {menus.map((menu, index) => {
               return (
                 <button
+                  key={index}
                   onClick={() => onChooseProductType(index)}
                   className={`px-6 ${
                     selectProductType == index && "active"

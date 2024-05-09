@@ -1,6 +1,44 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-xl;
+    @apply sm:text-2xl;
+
+  }
+  h2 {
+    @apply text-lg;
+    @apply sm:text-xl;
+  }
+  h3 {
+    @apply text-sm;
+
+    @apply font-semibold;
+    @apply leading-snug;
+  }
+
+  a {
+    @apply text-[#444444];
+    @apply text-xs;
+    @apply sm:text-sm; 
+    @apply font-semibold;
+
+    
+  }
+}
 @tailwind components;
 @tailwind utilities;
+@layer components{
+  .product-name{
+    color:#444444;
+  }
+  .product-price{
+    color:red;
+    @apply font-bold;
+    @apply text-sm;
+
+  }
+}
 
 
 body{

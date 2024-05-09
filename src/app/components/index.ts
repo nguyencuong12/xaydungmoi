@@ -12,7 +12,11 @@ import Sidebar from "./Sidebar";
 import HeadingLine from "./HeadingLine";
 import ActionButton from "./ActionButton";
 import CustomCard from "./CustomCard";
+import WrapperSection from "./common/WrapperSection";
+import GalleryMobileVersion from "./common/GalleryMobileWithOneItem";
 export {
+  GalleryMobileVersion,
+  WrapperSection,
   CustomCard,
   ActionButton,
   HeadingLine,

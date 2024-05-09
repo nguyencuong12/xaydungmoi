@@ -4,13 +4,9 @@ import { HighLightList1, HighlightList2 } from "../data";
 import Link from "next/link";
 import Image from "next/image";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import HeadingLine from "./HeadingLine";
+import WrapperSection from "./common/WrapperSection";
 const HighlightList = () => {
   const params = {
     slidesPerView: 3,
@@ -38,7 +34,7 @@ const HighlightList = () => {
 
   return (
     <>
-      <section className="highlight-list w-11/12 sm:w-9/12 mx-auto mt-8 bg-white p-4 rounded-md min-h-[180px]">
+      <WrapperSection className="bg-white p-4 rounded-md">
         <HeadingLine title="Danh mục nổi bật" />
         <Swiper
           {...params}
@@ -53,15 +49,15 @@ const HighlightList = () => {
               <SwiperSlide key={index}>
                 <Link href="#" className="flex flex-col items-center gap-2">
                   <Image src={highlightItem.imageSrc} width="0" height="0" sizes="100vw" className="w-[50px] h-[50px]" alt="SPNB"></Image>
-                  <span className="text-center font-semibold text-sm "> {highlightItem.title}</span>
+                  <span className="text-center "> {highlightItem.title}</span>
                 </Link>
               </SwiperSlide>
             );
           })}
         </Swiper>
-      </section>
+      </WrapperSection>
 
-      <section className="highlight-list-2  w-11/12 sm:w-9/12 mx-auto mt-8 bg-white p-4 rounded-md min-h-[180px] flex items-end">
+      <WrapperSection className="bg-white py-6 px-4 rounded-md">
         <Swiper
           {...params}
           // install Swiper modules
@@ -75,13 +71,13 @@ const HighlightList = () => {
               <SwiperSlide key={index}>
                 <Link href="#" className="flex flex-col items-center gap-1">
                   <Image src={highlightItem.imageSrc} width="0" height="0" sizes="100vw" className="w-[50px] h-[50px]" alt="SPNB"></Image>
-                  <span className="text-center font-semibold text-sm "> {highlightItem.title}</span>
+                  <span className="text-center "> {highlightItem.title}</span>
                 </Link>
               </SwiperSlide>
             );
           })}
         </Swiper>
-      </section>
+      </WrapperSection>
     </>
   );
 };
